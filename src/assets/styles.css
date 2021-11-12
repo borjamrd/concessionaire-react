@@ -1,39 +1,84 @@
-
-
-.navBar{
+.header{
     display: flex;
-    justify-content: center;
+    background-color: rgb(94, 69, 69);
+    justify-content: space-between;
     align-items: center;
-}
+    padding: 0% 5% 0% 5%;
 
-.section-related{
+}
+.pageTitle{
+    display: flex;
+    width: 20%;
+}
+.logo {
+    object-fit: contain;
+    height: 60px;
+    width: 280px;
+    display: flex;
+}
+.li{
+    display: flex;
+    padding: 20px;
+    border: rgb(48, 35, 35) solid 1px;
+}
+.li:hover {
+    background-color: rgb(235, 117, 38);
+    border-color: rgb(235, 117, 38);
+}
+.helpBar{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navBarElements{
+    display: flex;
+    background-color: rgb(94, 69, 69);
+    justify-content: start;
+    align-items: center;
+    padding: 0% 5% 0% 5%;
+}
+.underBar{
+    height: 5px;
+    width:100%;
+    background-color: rgb(235, 117, 38);
+}
+.section-related{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    background-color: lightgray;
 }
 
 
 .related-products{
+        font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    background-color: bisque;
+    width: 75%;
+    flex-direction: column;
+    padding: 2% 2% 2% 5%;
+}
+.related-title{
+    display: flex;
+    width: 100%;
+}
+.boxRelated{
+    display: flex;
     flex-direction: row;
-    column-gap: 5%;
-    width: 65%;
-    justify-content: center;
-    align-items: center;
 }
 .related-brands{
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    background-color: brown;
     flex-direction: column;
-    width: 35%;
-    justify-content: center;
-    align-items: center;
+    width: 25%;
+    padding: 2% 5% 2% 2%;
 }
 .main-section{
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    padding: 2% 5% 2% 5%;
+    background-color: lavender;
 }
 .categories {
     display: flex;
@@ -48,18 +93,56 @@
     color: black;
 }
 .articles{
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    background-color: azure;
+    width: 73%;
+    padding-left: 2%;
 }
 .main-products {
     width: 100%;
     padding: 2%;
-    display: grid;
-    background-color: salmon;
+    display:grid;
     grid-template-columns: 1fr 1fr 1fr;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 2%;
 
+}
+.products{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 180px;
+    height: 180px;
+    padding: 0% 2% 2% 2%;
+    margin-bottom: 2%;
+    border: solid 1px grey;
+    background-color: whitesmoke;
+}
+.button-section{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.pagination-bar{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 2% 0% 2% 0%;
+}
+.page-number{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    padding: 1% 2%;
+    background-color: whitesmoke;
+    border: solid 1px grey;
+    margin-right: 1%;
 }
 .footer{
     display: flex;
@@ -67,4 +150,14 @@
     justify-content: space-around;
     height: 100px;
     width: 100%;
+}
+.footer-item{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+.price {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
