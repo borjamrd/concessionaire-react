@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "./assets/styles.css";
+import imagenes from './assets/imagenes';
+
 
 class MotoLogo extends React.Component{
   render(){
-    return <h1 className="pageTitle"><a href={this.props.MotoLogohref}> Motoshop</a></h1>;
+    return <img src={imagenes.logo}></img>;
   }
 }
 
@@ -36,8 +38,8 @@ let helpbarElements = [
 class Header extends React.Component{
   render(){
     return <div className = "header">
-      <MotoLogo className="logo" MotoLogohref = 'www.google.es'/>
-      <Bar  elements = {helpbarElements}/>  
+      <MotoLogo className="logo"/>
+      <Bar  elements = {helpbarElements}/> 
     </div>
   }
 }
@@ -62,7 +64,7 @@ class RelatedBrands extends React.Component{
   render(){
     return (<div className="related-brands">
     <h4>Marcás más vendidas</h4>
-    <img src="#" className="brand-image"/>
+    <img src={imagenes.alpinestars} className="brand-image"/>
     <p><a href="www.google.com">Ver todas las marcas</a></p>
   </div>)
   }
@@ -90,7 +92,7 @@ class Products extends React.Component{
   }
 }
 let relatedProducts = [
-  {src:"#", name:"AGV Skyline Blog", href:"#", category: "casco"},
+  {src: "#", name:"AGV Skyline Blog", href:"#", category: "casco"},
   {src:"#", name:"Schuberth SRT1", href:"#", category: "casco"},
   {src:"#", name:"Arai Quantum DNA", href:"#", category: "chaqueta"},
   {src:"#", name:"sShoei Enigma TC4 XR1100", href:"#", category: "casco"},
@@ -167,7 +169,6 @@ class FilterProducts extends React.Component{
     </div>
   }
 }
-
 
 
 class Articles extends React.Component{
