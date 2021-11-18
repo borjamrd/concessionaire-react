@@ -92,7 +92,7 @@ class Products extends React.Component{
   }
 }
 let relatedProducts = [
-  {src: "#", name:"AGV Skyline Blog", href:"#", category: "casco"},
+  {src:"#", name:"AGV Skyline Blog", href:"#", category: "casco"},
   {src:"#", name:"Schuberth SRT1", href:"#", category: "casco"},
   {src:"#", name:"Arai Quantum DNA", href:"#", category: "chaqueta"},
   {src:"#", name:"sShoei Enigma TC4 XR1100", href:"#", category: "casco"},
@@ -216,6 +216,25 @@ let footerElements = [
   {href:"", name:"Devoluciones"}
 ]
 
+class Toggle extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {isToggleON: true}
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick (){
+    this.setState(prevState =>({
+      isToggleON: !prevState.isToggleON
+    }));
+  }
+  render (){
+    return <div>
+      <button onClick={this.handleClick}>{this.state.isToggleON? "ON" : "OFF"}</button>
+    </div>
+  }
+}
+
+
 function App (){
     return (
       <div>
@@ -225,6 +244,7 @@ function App (){
         <Related />
         <MainSection />
         <Footer items = {footerElements} />
+        <Toggle />
       </div>
     )
   }
